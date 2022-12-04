@@ -11,9 +11,11 @@ To replicate this, you'll need to follow these steps:
 2. Install [Lab Recorder](https://github.com/labstreaminglayer/App-LabRecorder) to determine stream properties
 
 ## The Guardians of the Garden
-<div style="padding: 25px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;" >
+<img src="styles.svg" width="0" height="0" alt="css-in-readme">
 
-<div style="flex-basis: 33%">
+<div id="guardians" >
+
+<div>
     <a href="https://github.com/wingspear" target="_blank">
         <img src="https://github.com/wingspear.png"
         >
@@ -21,7 +23,7 @@ To replicate this, you'll need to follow these steps:
     <p><b>Ethan Soo</b> — <span>Producer + Developer<span></p>
 </div>
 
-<div style="flex-basis: 33%">
+<div>
     <a href="https://github.com/kzhao189" target="_blank">
         <img src="https://github.com/kzhao189.png"
         >
@@ -29,7 +31,7 @@ To replicate this, you'll need to follow these steps:
     <p><b>Katie Zhao</b> — <span>Artist + Developer<span></p>
 </div>
 
-<div style="flex-basis: 33%">
+<div>
     <a href="https://github.com/rylan-vrar" target="_blank">
         <img src="https://github.com/rylan-vrar.png"
         >
@@ -37,7 +39,7 @@ To replicate this, you'll need to follow these steps:
     <p><b>Rylan Pozniak</b> — <span>Developer<span></p>
 </div>
 
-<div style="flex-basis: 33%">
+<div>
     <a href="https://github.com/glowcone" target="_blank">
         <img src="https://github.com/glowcone.png"
         >
@@ -45,7 +47,7 @@ To replicate this, you'll need to follow these steps:
     <p><b>Steph Ng</b> — <span>Producer + Developer<span></p>
 </div>
 
-<div style="flex-basis: 33%">
+<div>
     <a href="https://github.com/nickpudjarminta" target="_blank">
         <img src="https://github.com/nickpudjarminta.png"
         >
@@ -53,7 +55,7 @@ To replicate this, you'll need to follow these steps:
     <p><b>Nicholas Pudjarminta</b> — <span>Technical Artist<span></p>
 </div>
 
-<div style="flex-basis: 33%">
+<div>
     <a href="https://github.com/garrettmflynn" target="_blank">
         <img src="https://github.com/garrettmflynn.png"
         >
