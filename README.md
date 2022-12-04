@@ -11,7 +11,7 @@ To replicate this, you'll need to follow these steps:
 2. Install [Lab Recorder](https://github.com/labstreaminglayer/App-LabRecorder) to determine stream properties
 
 ## The Guardians of the Garden
-<img src="styles.svg" width="0" height="0" alt="css-in-readme">
+<img src="styles.svg" width="400" height="400" alt="css-in-readme">
 
 <div id="guardians" >
 
