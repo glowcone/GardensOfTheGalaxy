@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class MinigameController : MonoBehaviour
 {
-    private MainGameController mainGameController;
-
-    void OnGameEnd()
+    protected void OnGameEnd(WinState winState)
     {
-        
+        MainGameController.Instance.OnGameEnd(winState);
     }
 }
