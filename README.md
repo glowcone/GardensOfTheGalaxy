@@ -1,19 +1,23 @@
 # Gardens of the Galaxy
+![Home Screen](./home.png)
 
-We're gonna put stuff here later.
+**Gardens of the Galaxy** is a P300-based game created for the BCI Game Jam 2022: Mini Game Madness.
 
-## Appendices
-### Appendix A: Adding OpenBCI Support
-During this project, we were able to add support for OpenBCI devices to the [BCI Essentials Python](https://github.com/kirtonBCIlab/bci-essentials-python) utilities.
+As a Guardian of the Gardens, explore alien worlds and compete against other Guardians in out-of-this-world minigames, including: 
+- [x] **Rock, Paper, Scissors** World
+- [ ] **Fishing** World
+- [ ] **Maze** World
+- [ ] **Tic Tac Toe** World
 
-To replicate this, you'll need to follow these steps:
-1. Install [OpenBCI LSL](https://github.com/openbci-archive/OpenBCI_LSL)
-2. Install [Lab Recorder](https://github.com/labstreaminglayer/App-LabRecorder) to determine stream properties
-
-## The Guardians of the Garden
+## The Guardians of the (OG) Garden
 - [Ethan Soo](https://github.com/wingspear)
 - [Katie Zhao](https://github.com/kzhao189)
 - [Rylan Pozniak](https://github.com/rylan-vrar)
 - [Steph Ng](https://github.com/glowcone)
 - [Nicholas Pudjarminta](https://github.com/NickPudjarminta)
 - [Garrett Flynn](https://github.com/garrettflynn)
+
+
+P.S. It's a real place!
+
+![The Garden](./thegarden.jpg)
