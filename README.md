@@ -13,7 +13,7 @@ To replicate this, you'll need to follow these steps:
 ## The Guardians of the Garden
 - [Ethan Soo](https://github.com/wingspear)
 - [Katie Zhao](https://github.com/kzhao189)
-- [Rylan Daniels](https://github.com/rylan-vrar)
+- [Rylan Pozniak](https://github.com/rylan-vrar)
 - [Steph Ng](https://github.com/glowcone)
 - [Nicholas Pudjarminta](https://github.com/NickPudjarminta)
 - [Garrett Flynn](https://github.com/garrettflynn)
