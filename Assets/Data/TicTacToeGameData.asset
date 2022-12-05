@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dbd0f29c7c450dbdcb8a3cdd146475, type: 3}
   m_Name: TicTacToeGameData
   m_EditorClassIdentifier: 
-  sceneName: TicTacToeGame
+  sceneName: TicTacToeWorld
   planetPrefab: {fileID: 1670507824450520501, guid: 828a0c2fae2504e66ae3eceb89551346, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dbd0f29c7c450dbdcb8a3cdd146475, type: 3}
   m_Name: FishingGameData
   m_EditorClassIdentifier: 
-  sceneName: FishingGame
+  sceneName: FishingWorld
   planetPrefab: {fileID: 666289094178958649, guid: d01be034a64344f82be36a15867edac7, type: 3}

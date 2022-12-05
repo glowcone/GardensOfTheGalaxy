@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dbd0f29c7c450dbdcb8a3cdd146475, type: 3}
   m_Name: MazeGameData
   m_EditorClassIdentifier: 
-  sceneName: MazeGame
+  sceneName: MazeWorld
   planetPrefab: {fileID: 5085585954168369157, guid: 254153a56fe414433853e5b20be0535f, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dbd0f29c7c450dbdcb8a3cdd146475, type: 3}
   m_Name: RockPaperScissorsGameData
   m_EditorClassIdentifier: 
-  sceneName: RPSGame
+  sceneName: RockPaperScissorsWorld
   planetPrefab: {fileID: 5986626722565463429, guid: 324694c253b63413e9f4bb147cfd1f06, type: 3}

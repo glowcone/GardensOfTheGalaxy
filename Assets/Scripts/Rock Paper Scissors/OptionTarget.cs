@@ -27,8 +27,7 @@ public class OptionTarget : MonoBehaviour
     private void OnMouseDown()
     {
         renderer.material.color = Color.yellow;
-        rpsManager.player1DecisionText.text = "P1 Decision: " + optionName;
-        rpsManager.GenerateAIDecision();
+        SelectOption();
     }
 
     private void OnMouseUp()
@@ -41,5 +40,11 @@ public class OptionTarget : MonoBehaviour
     {
         hovered = false;
         renderer.material.color = Color.white;
+    }
+
+    public void SelectOption()
+    {
+        rpsManager.player1DecisionText.text = "P1 Decision: " + optionName;
+        rpsManager.GenerateAIDecision();
     }
 }
