@@ -7,10 +7,11 @@ using Random = UnityEngine.Random;
 
 public class FishingGameController : MonoBehaviour
 {
-    public int numRows;
-    public int numCols;
+    public int numRows = 8;
+    public int numCols = 8;
 
     public GameObject[] fishPrefabs;
+    public GameObject waterSquarePrefab;
 
     public List<List<GameObject>> grid;
     public List<Fish> allFish;
@@ -29,20 +30,30 @@ public class FishingGameController : MonoBehaviour
 
         for (int r = 0; r < numRows; r++)
         {
+            isFish.Add(new List<bool>());
             int randCol = Random.Range(0, numCols);
             for (int c = 0; c < numCols; c++)
             {
+                // spawn water
+                GameObject waterObject = Instantiate(waterSquarePrefab);
+                waterObject.transform.position = new Vector3(c, r, 1);
+
+
                 if (c == randCol)
                 {
-                    isFish[r][c] = true;
-                    GameObject go = Instantiate(fishPrefabs[Random.Range(0, fishPrefabs.Length)]);
-                    Fish fish = go.GetComponent<Fish>();
+                    isFish[r].Add(true);
+                    GameObject fishObject = Instantiate(fishPrefabs[Random.Range(0, fishPrefabs.Length)]);
+                    fishObject.transform.position = new Vector3(c, r, 0);
+                    Fish fish = fishObject.GetComponent<Fish>();
                     fish.rowIndex = r;
+                    fish.colIndex = c;
                     allFish.Add(fish);
+                    fishObject.GetComponent<SPO_ShaderColor>().myIndex = r;
+                    fishObject.tag = "BCI";
                 }
                 else
                 {
-                    isFish[r][c] = false;
+                    isFish[r].Add(false);
                 }
             }
         }
