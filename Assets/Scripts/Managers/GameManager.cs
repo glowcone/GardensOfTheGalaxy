@@ -21,4 +21,9 @@ public class GameManager : MonoBehaviour
         // launches game
 
     }
+
+    public void SetNumPlayers(int numPlayers)
+    {
+        this.numPlayers = numPlayers;
+    }
 }
