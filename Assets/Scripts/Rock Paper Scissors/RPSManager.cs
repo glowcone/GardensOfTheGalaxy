@@ -51,9 +51,9 @@ public class RPSManager : MonoBehaviour
         else if (player1DecisionText.text == "P1 Decision: Paper" && player2DecisionText.text == "P2 Decision: Scissors")
             return "P2 Wins!";
         else if (player1DecisionText.text == "P1 Decision: Scissors" && player2DecisionText.text == "P2 Decision: Rock")
-            return "P1 Wins!";
-        else if (player1DecisionText.text == "P1 Decision: Scissors" && player2DecisionText.text == "P2 Decision: Paper")
             return "P2 Wins!";
+        else if (player1DecisionText.text == "P1 Decision: Scissors" && player2DecisionText.text == "P2 Decision: Paper")
+            return "P1 Wins!";
         else if (player1DecisionText.text == "P1 Decision: Scissors" && player2DecisionText.text == "P2 Decision: Scissors")
             return "Tie!";
 
