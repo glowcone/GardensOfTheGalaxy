@@ -10,6 +10,8 @@ As a Guardian of the Gardens, explore alien worlds and compete against other Gua
 - [ ] **Tic Tac Toe**: On the Pineapple Planet, place three tokens in a row to win! (0%)
 - [ ] **Connect Four**: On the Icicle Planet, connect four tokens in a row to win! (0%)
 
+> **Note:** Multiplayer currently launches in single player mode.
+
 ## Controls
 All standard controls from [bci-essentials-unity](https://github.com/kirtonBCIlab/bci-essentials-unity) have been included.
 
