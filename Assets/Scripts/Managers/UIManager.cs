@@ -31,4 +31,8 @@ public class UIManager : MonoBehaviour
         canvas.gameObject.SetActive(true);
         activeCanvasGroup.Add(canvas.gameObject);
     }
+    public void HideCanvas(Canvas canvas)
+    {
+        canvas.gameObject.SetActive(false);
+    }
 }

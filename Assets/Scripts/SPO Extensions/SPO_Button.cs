@@ -7,17 +7,22 @@ using UnityEngine.UI;
 
 public class SPO_Button : SPO
 {
+    public float delay = 0;
     // What to do on selection
     public override void OnSelection()
     {
         // This is free form, do whatever you want on selection
 
-        GetComponent<Button>().onClick.Invoke();
+        Invoke("OnSelectEvent", delay);
 
         StartCoroutine(ButtonQuickFlash());
 
         // Reset
         TurnOff();
+    }
+    private void OnSelectEvent()
+    {
+        GetComponent<Button>().onClick.Invoke();
     }
 
     // Turn the stimulus on

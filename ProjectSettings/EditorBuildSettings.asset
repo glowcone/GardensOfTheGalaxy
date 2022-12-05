@@ -5,19 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/BCI Demos/P300Training.unity
-    guid: d6b563a047e167c4bb53232e70fc9c47
+    path: Assets/Scenes/Main/Home.unity
+    guid: 94686e89dfb0de14a8ac2ae75f33e0bc
   - enabled: 1
-    path: Assets/Scenes/BCI Demos/GameJamDemo.unity
-    guid: 03370cc5af6aa2046a8f2741967b1f44
-  - enabled: 1
-    path: Assets/Scenes/BCI Demos/MITraining.unity
-    guid: 9fe2056da4f5fdb4794b47ac4c913cea
-  - enabled: 1
-    path: Assets/Scenes/BCI Demos/SSVEPtraining.unity
-    guid: 9095b4ac84eabff4bbd78d8db3a1c32b
+    path: Assets/Scenes/Main/LevelSelection.unity
+    guid: 70399a3007e4141678426a9cf708bfc9
   m_configObjects: {}
