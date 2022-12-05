@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using Random = UnityEngine.Random;
 
 public class FishingGameController : MonoBehaviour
 {
@@ -10,11 +12,12 @@ public class FishingGameController : MonoBehaviour
 
     public GameObject[] fishPrefabs;
 
-    public bool[,] isFish;
-    public GameObject[,] grid;
-
+    public List<List<GameObject>> grid;
     public List<Fish> allFish;
+    public List<List<bool>> isFish;
     public Fish chosenFish = null;
+
+    public GameObject crane;
 
     void Start()
     {
@@ -22,7 +25,7 @@ public class FishingGameController : MonoBehaviour
     }
     private void SpawnGrid()
     {
-        isFish = new bool[numRows,numCols];
+        isFish = new List<List<bool>>();
 
         for (int r = 0; r < numRows; r++)
         {
@@ -31,7 +34,7 @@ public class FishingGameController : MonoBehaviour
             {
                 if (c == randCol)
                 {
-                    isFish[r, c] = true;
+                    isFish[r][c] = true;
                     GameObject go = Instantiate(fishPrefabs[Random.Range(0, fishPrefabs.Length)]);
                     Fish fish = go.GetComponent<Fish>();
                     fish.rowIndex = r;
@@ -39,20 +42,23 @@ public class FishingGameController : MonoBehaviour
                 }
                 else
                 {
-                    isFish[r, c] = false;
+                    isFish[r][c] = false;
                 }
             }
         }
     }
-    
-    private void MoveFish()
+    public void MoveChosenFish()
+    {
+
+    }
+    public void MoveOtherFish()
     {
         Assert.IsTrue(chosenFish != null);
 
         // move all fish except player's fish
         foreach(Fish fish in allFish)
         {
-            // if not the same fish fish
+            // if not the same fish
             if (fish.rowIndex != chosenFish.rowIndex)
             {
                 // find random col to move to
@@ -74,4 +80,103 @@ public class FishingGameController : MonoBehaviour
     {
         chosenFish = fish;
     }
+    public void RemoveColumn()
+    {
+        if (chosenFish.colIndex == 0)
+        {
+            // remove last column
+            foreach(List<GameObject> rowGrid in grid)
+            {
+                RemoveLastColumn();
+            }
+        }
+        else if (chosenFish.colIndex == numCols - 1)
+        {
+            // remove first column
+            foreach (List<GameObject> rowGrid in grid)
+            {
+                RemoveFirstColumn();
+            }
+        }
+        else
+        {
+            bool coinFlip = Random.Range(0, 1) > 0.5f ? true : false;
+
+            if (coinFlip)
+            {
+                RemoveLastColumn();
+            }
+            else
+            {
+                RemoveFirstColumn();
+            }
+        }
+        numCols--;
+    }
+    public void StartMoveCrane(int rowIndex, int colIndex)
+    {
+        StartCoroutine(MoveCraneAndFish(rowIndex, colIndex, 4f, 4f, null));
+    }
+
+    IEnumerator MoveCraneAndFish(int rowIndex, int colIndex, float timeX, float timeY, Action onComplete)
+    {
+        Vector3 startingPos = crane.transform.position;
+        Vector3 finalPos = Vector3.zero;
+        float elapsedTime = 0;
+
+        while (elapsedTime < timeX)
+        {
+            crane.transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / timeX));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        startingPos = finalPos;
+        finalPos = Vector3.zero;
+        elapsedTime = 0;
+        while (elapsedTime < timeY)
+        {
+            crane.transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / timeY));
+            yield return null;
+        }
+        onComplete.Invoke();
+    }
+
+    #region Helper Functions
+    // helper functions
+    private void RemoveFirstColumn()
+    {
+        // remove first column
+        foreach (List<GameObject> rowGrid in grid)
+        {
+            rowGrid.RemoveAt(0);
+        }
+    }
+    private void RemoveLastColumn()
+    {
+        // remove last column
+        foreach (List<GameObject> rowGrid in grid)
+        {
+            rowGrid.RemoveAt(numCols - 1);
+        }
+    }
+    #endregion
+
+
+    /*
+    private IEnumerator SmoothLerp(float time)
+    {
+        Vector3 startingPos = initialWayPoint.transform.position;
+        Vector3 finalPos = finalWayPoint.transform.position;
+        float elapsedTime = 0;
+
+        while (elapsedTime < time)
+        {
+            transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        onComplete.Invoke();
+    }
+    */
 }

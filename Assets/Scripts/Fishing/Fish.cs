@@ -6,6 +6,8 @@ using UnityEngine;
 public class Fish : MonoBehaviour
 {
     public int rowIndex;
+    public int colIndex;
+
     public void MoveTo(Vector3 pos, Action moveComplete)
     {
         StartCoroutine(SmoothLerp(pos, 3f, moveComplete));

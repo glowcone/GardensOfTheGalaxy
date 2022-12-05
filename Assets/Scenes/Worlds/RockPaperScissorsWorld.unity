@@ -537,9 +537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1886253386}
+  - {fileID: 1971344432}
+  - {fileID: 4897048591402495086}
 --- !u!1 &447328753
 GameObject:
   m_ObjectHideFlags: 0
